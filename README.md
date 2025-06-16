@@ -1,27 +1,13 @@
-<p align="center">
-    <img src="/docs/assets/edgesimpy-icon.jpg" alt="EdgeSimPy Logo" width="200" height="200" />
-    <h3 align="center">EdgeSimPy</h3>
-    <p align="center">🚀 The Next-Generation Edge Computing Simulation Toolkit 🚀</p>
-    <p align="center"><a href="https://edgesimpy.github.io/" target="_blank">Website</a> &#183;
-    <a href="https://edgesimpy.github.io/documentation/" target="_blank">Documentation</a> &#183;
-    <a href="https://www.github.com/edgesimpy/edgesimpy-tutorials" target="_blank">Tutorials</a> &#183;
-    <a href="https://raw.githubusercontent.com/EdgeSimPy/edgesimpy/master/docs/assets/EdgeSimPy-Paper-FGCS.pdf" target="_blank">Paper</a></p>
-</p>
-
-
----
 
 EdgeSimPy is a Python-based Edge Computing simulator with easy-to-grasp abstractions for edge servers, network devices, and applications, and built-in models for user mobility, application composition, and power consumption. An overview of EdgeSimPy use cases is shown in the figure below.
 
 <img src="/docs/assets/edgesimpy-features.jpg" alt="EdgeSimPy Use Cases" width="60%" />
 
 
-EdgeSimPy was designed to streamline the prototyping of resource management policies through realistic simulations. To do this, EdgeSimPy provides a set of unique functional abstractions (e.g., container registries, images, and layers) that replicate the application provisioning method of widely used platforms such as [Docker](https://www.docker.com/), allowing seamless integration with repositories like [DockerHub](https://hub.docker.com/).
+EdgeSimPy was designed to streamline the prototyping of resource management policies through realistic simulations. To do this, EdgeSimPy provides a set of unique functional abstractions (e.g., container registries, images, and layers) that replicate the application provisioning method of widely used platforms such as [Docker](https://www.docker.com/)
 
 
-# Overview
 
-This section describes EdgeSimPy's architecture and main components. You can also learn more details about EdgeSimPy by reading our research paper ([link here](https://doi.org/10.1016/j.future.2023.06.013), [PDF here](https://raw.githubusercontent.com/EdgeSimPy/edgesimpy/master/docs/assets/EdgeSimPy-Paper-FGCS.pdf)).
 
 ## Input Files
 
@@ -68,23 +54,6 @@ You can find more details on EdgeSimPy's functional abstractions below:
 - **Container Images:** Embed the basic functionality for services. Like applications, container images are modeled as abstract entities, so they have no resource requirements by themselves. Instead, the disk demand of a given container image results from the size of its layers.
 - **Container Layers:** Represent the instructions aggregated into container images. Each container layer carries attributes representing its software instruction and disk size. As container images in EdgeSimPy adhere to a layered filesystem model, co-hosted services can share read-only image data, resulting in considerable disk savings.
 
-# Quick Start
-
-Installing EdgeSimPy is a breeze! Make sure you have Python 3.7.1 or newer. Then, run the following command:
-
-```bash
-pip install -q git+https://github.com/EdgeSimPy/EdgeSimPy.git
-```
-
-Want a different EdgeSimPy version? Simply replace the content after the "@" with your desired version (you can check out all EdgeSimPy released versions [here](https://github.com/EdgeSimPy/EdgeSimPy/releases)).
-
-
-
-EdgeSimPy has a tutorials library ([link here](https://github.com/EdgeSimPy/edgesimpy-tutorials)) to help you use the simulator with ease. There, you will find examples for creating resource management policies, extending simulated components, monitoring the simulation, and running large-scale experiments.
-
-
-
-One of the unique features of EdgeSimPy is a high-level API that leverages the user-friendly syntax of the Python language to simplify the process of implementing resource management policies. Here is an example of service placement policy using EdgeSimPy:
 
 
 
@@ -167,36 +136,3 @@ for service in Service.all():
 ```
 
 
-
-# Check Out EdgeSimPy's Paper
-
-> **:tada: We are glad to inform that EdgeSimPy's paper has been published in the Future Generation Computer Systems journal :tada:**
-
-- **Access the paper in the journal's page:** [https://doi.org/10.1016/j.future.2023.06.013](https://doi.org/10.1016/j.future.2023.06.013)
-- **Download the paper with no charges:** [PDF here](https://raw.githubusercontent.com/EdgeSimPy/edgesimpy/master/docs/assets/EdgeSimPy-Paper-FGCS.pdf)
-
-**If you use EdgeSimPy in an academic work, we would appreciate citations according to the following reference:**
-
-```bibtex
-@article{souza2023edgesimpy,
-    author={Paulo S. Souza and Tiago Ferreto and Rodrigo N. Calheiros},
-    title={EdgeSimPy: Python-Based Modeling and Simulation of Edge Computing Resource Management Policies},
-    journal={Future Generation Computer Systems},
-    year={2023},
-    issn={0167-739X},
-    volume={148},
-    pages={446-459},
-    doi={https://doi.org/10.1016/j.future.2023.06.013},
-    publisher={Elsevier}
-}
-```
-
-
-# Collaborators
-
-* Paulo S. Souza ([email](mailto:paulo.severo@edu.pucrs.br), [website](http://paulosevero.github.io/))
-* Tiago C. Ferreto ([email](mailto:tiago.ferreto@pucrs.br), [website](https://tiagoferreto.github.io/))
-* Rodrigo N. Calheiros ([email](mailto:r.calheiros@westernsydney.edu.au), [website](https://staff.cdms.westernsydney.edu.au/~rcalheiros/))
-* Carlos H. Kayser ([email](mailto:carlos.kayser@edu.pucrs.br), [website](https://scholar.google.com/citations?user=XOpUgdgAAAAJ&hl=en&oi=ao))
-* Felipe P. Rubin ([email](mailto:felipe.rubin@edu.pucrs.br), [website](https://scholar.google.com.br/citations?hl=en-US&user=ilxJcssAAAAJ&view_op=list_works&sortby=pubdate))
-* Ângelo V. Crestani ([email](mailto:angelo.crestani@edu.pucrs.br))
